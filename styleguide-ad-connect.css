@@ -2,48 +2,57 @@
    https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers
    https://css-tricks.com/css-cascade-layers/ */
 
-:root {
-  --primary-color: #005f61;
-  --primary-lighter-color: #d1fdfe;
-  --accent-color: #a8005d;
-  --accent-lighter-color: #fcd6e6;
-  --white-color: #fdfdfd;
-  --black-color: #353434;
+body {
+  font-family: var(--font-family);
 
-  --line-height-heading: 1.2;
-  --line-height-text: 1.4;
-
-  --letter-spacing: 2px;
-  --text-uppercase: uppercase;
-  --border-radius: 5px;
-  --border-none: none;
-
-  --font-weight-heading: 700;
-  --font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-    sans-serif;
-
-  --font-size-s: 16px;
-  --font-size-m: 18px;
-  --font-size-l: 20px;
-
-  --font-size-heading-xs: 20px;
-  --font-size-heading-s: 24px;
-  --font-size-heading-m: 32px;
-  --font-size-heading-l: 40px;
-
-  --button-size: 10px 25px;
+  label,
+  button {
+    font-family: var(--font-family);
+  }
 }
 
 @layer styleguide {
-  /* Schrijf hier de verschillende stijlen, die
-       gedeeld gaan worden door jullie projecten */
+  :root {
+    /* Colors */
+    --primary-color: #005f61;
+    --primary-lighter-color: #adebec;
+    --accent-color: #a8005d;
+    --accent-lighter-color: #fcd6e6;
+    --white-color: #fdfdfd;
+    --black-color: #353434;
+    --input-color: #ececec;
 
-  /* Kleuren */
+    /* Line height */
+    --line-height-heading: 1.2;
+    --line-height-text: 1.4;
 
-  /* Typografie */
+    /* Button */
+    --button-size: 10px 25px;
+    --border-radius: 5px;
+    --border-none: none;
 
-  /* Formulier elementen */
+    /* Typographie */
+    --font-weight-standard: 400;
+    --font-weight-heading: 700;
+    --font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
 
+    --font-size-button: 0.9rem;
+
+    --font-size-s: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.25rem;
+
+    --font-size-heading-xs: 1.3rem;
+    --font-size-heading-s: 1.5rem;
+    --font-size-heading-m: 2rem;
+    --font-size-heading-l: 2.5rem;
+
+    --letter-spacing: 2px;
+    --text-uppercase: uppercase;
+  }
+
+  /* Color classes */
   .primary-color {
     background: var(--primary-color);
   }
@@ -69,6 +78,7 @@
     background: var(--black-color);
   }
 
+  /* Font classes */
   .font-size-heading-l {
     font-size: var(--font-size-heading-l);
   }
@@ -98,24 +108,166 @@
   }
 }
 
-input {
-  accent-color: var(--accent-color);
-  &:focus {
-    border: 1px solid var(--accent-color);
+/* ul en evt ol */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    p {
+      font-size: var(--font-size-button);
+      margin: 0;
+    }
   }
 }
 
+/* Table */
+table {
+  border-spacing: 0;
+  width: 100%;
+  font-family: var(--font-family);
+  border: 1px solid var(--primary-color);
+
+  thead {
+    background: var(--primary-color);
+    color: var(--white-color);
+
+    tr {
+      text-align: left;
+
+      th {
+        padding: 0 10px;
+        height: 30px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  tr:nth-of-type(even) {
+    background-color: var(--input-color);
+  }
+
+  tbody {
+    padding: 0 10px;
+
+    tr {
+      td {
+        padding: 0 10px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+/* Blockquote */
+blockquote {
+  background: var(--input-color);
+  border-radius: var(--border-radius);
+
+  p {
+    padding: 5px 0px;
+    font-style: italic;
+    color: #969696;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    gap: 10px;
+    font-size: var(--font-size-m);
+
+    span {
+      font-size: 200%;
+      font-family: cursive;
+    }
+  }
+}
+
+/* Form label */
+label {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: var(--font-size-s);
+}
+
+/* Form input & textarea */
+input,
+textarea {
+  accent-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-heading-s);
+  background: rgb(236, 236, 236);
+  outline: none;
+  font-size: var(--font-size-s);
+  padding: 3px 5px;
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+
+  &:focus {
+    border: 1px solid var(--primary-color);
+    outline: none;
+    border-radius: var(--border-radius);
+  }
+
+  /* Form sumbit button */
+  &[type="submit"] {
+    padding: var(--button-size);
+    letter-spacing: var(--letter-spacing);
+    text-transform: var(--text-uppercase);
+    background-color: var(--accent-color);
+    border: var(--border-none);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-button);
+    font-family: var(--font-family);
+    color: var(--accent-lighter-color);
+    cursor: pointer;
+
+    &:active {
+      border: 1px solid var(--accent-color);
+    }
+
+    &:hover {
+      background: var(--accent-lighter-color);
+      color: var(--accent-color);
+    }
+  }
+}
+
+/* Range input waarvan de thumb wordt veranderd */
+input[type="range"]::-webkit-slider-thumb {
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Meer nieuws button */
 button {
   padding: var(--button-size);
   letter-spacing: var(--letter-spacing);
   text-transform: var(--text-uppercase);
-  background-color: var(--accent-color);
+  background-color: var(--primary-color);
   border: var(--border-none);
   border-radius: var(--border-radius);
   font-family: var(--font-family);
-  color: var(--accent-lighter-color);
+  color: var(--primary-lighter-color);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 5px;
+
+  &:active {
+    border: 1px solid var(--primary-color);
+  }
+
+  &:hover {
+    background: var(--primary-lighter-color);
+    color: var(--primary-color);
+  }
 
   span {
-    transform: translateY(2px);
+    transform: translateY(3px);
   }
 }
