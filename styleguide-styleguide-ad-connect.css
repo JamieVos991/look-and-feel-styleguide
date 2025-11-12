@@ -8,79 +8,13 @@
        gedeeld gaan worden door jullie projecten */
 
     /* Kleuren */
-    #kleur {
-        .main-color {
-            background-color: #005F61;
-            color: white;
-        }
 
-        .main-color-hover {
-            background-color: #D1FDFE;
-            color: black;
-        }
 
-        .accent-color {
-            background-color: #A8005D;
-            color: white;
-        }
 
-        .accent-color-hover {
-            background-color: #FCD6E6;
-            color: black;
-        }
-
-        .white-color {
-            background-color: #FDFDFD;
-            border: 1px solid black;
-            color: black;
-        }
-
-        .black-color {
-            background-color: #353434;
-            color: white;
-        }
-
-    }
     /* Typografie */
-    #typografie {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        
-        .heading1 {
-            font-size: 40px;
-        }
-
-        .heading2 {
-            font-size: 32px;
-        }
-
-        .heading3 {
-            font-size: 24px;
-        }
-        
-        .heading4 {
-            font-size: 20px;
-        }
-
-        .large-text {
-            font-size: 18px;
-        }
-
-        .normal-text {
-            font-size: 16px;
-        }
-
-        .small-text {
-            font-size: 14px;
-        }
-
-        .quote {
-            font-style: italic;
-            font-weight: 800;
-            color: grey;
-
-        }
-    }
+ 
 
     /* Formulier elementen */
+    
 
 }
