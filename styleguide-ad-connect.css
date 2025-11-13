@@ -115,19 +115,26 @@ body {
 /* ul en evt ol */
 ul {
   list-style-type: none;
-  padding-left: 0;
 
   li {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    list-style: none;
+    position: relative;
 
-    p {
-      font-size: var(--font-size-button);
-      margin: 0;
+    &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url("./assets/check.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
     }
   }
 }
+
 
 /* Table */
 table {
