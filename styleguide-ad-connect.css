@@ -20,7 +20,7 @@ body {
     --accent-lighter-color: #fcd6e6;
     --white-color: #fdfdfd;
     --black-color: #353434;
-    --input-color: #ececec;
+    --background-input-color: #ececec;
 
     /* Line height */
     --line-height-heading: 1.2;
@@ -76,6 +76,10 @@ body {
 
   .black-color {
     background: var(--black-color);
+  }
+
+  .background-input-color {
+    background-color: var(--background-input-color);
   }
 
   /* Font classes */
