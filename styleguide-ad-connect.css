@@ -152,7 +152,7 @@ table {
   }
 
   tr:nth-of-type(even) {
-    background-color: var(--input-color);
+    background-color: var(--background-input-color);
   }
 
   tbody {
@@ -204,7 +204,7 @@ textarea {
   accent-color: var(--primary-color);
   border-radius: var(--border-radius);
   font-size: var(--font-size-heading-s);
-  background: rgb(236, 236, 236);
+  background: var(--background-input-color);
   outline: none;
   font-size: var(--font-size-s);
   padding: 3px 5px;
