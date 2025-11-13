@@ -113,11 +113,13 @@ body {
 }
 
 /* ul en evt ol */
-ul {
+.ul_ad{
   list-style-type: none;
+  padding: 0;
 
   li {
     list-style: none;
+    padding-left: 25px;
     position: relative;
 
     &::before {
