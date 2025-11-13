@@ -111,7 +111,7 @@ body {
 }
 
 /* ul en evt ol */
-.ul_ad{
+.ul_ad {
   list-style-type: none;
   padding: 0;
 
@@ -121,20 +121,19 @@ body {
     position: relative;
 
     &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
-    background-image: url("./assets/check.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background-image: url("./assets/check.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
 }
-
 
 /* Table */
 table {
@@ -207,13 +206,55 @@ blockquote {
 
 .label-ad {
   display: grid;
+  place-content: center;
+}
+
+/* Label van de search input */
+.label-search__ad {
+  display: inline-flex;
+  align-items: stretch;
+  border-bottom-left-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+  background-color: #005f61;
+  flex-direction: row-reverse;
+
+  &::before {
+    content: "";
+    display: grid;
+    place-content: center;
+    width: 45px;
+    aspect-ratio: 1 / 1;
+
+    background-color: var(--primary-color);
+    align-self: stretch;
+
+    /* Mask de SVG, omdat ik de svg als url in de content gebruikt heb
+    kan ik niet de kleur ervan veranderen. Dit werkt wel dus wel.*/
+    mask: url(./assets/search.svg) no-repeat center;
+    mask-size: 50%;
+    -webkit-mask: url(./assets/search.svg) no-repeat center;
+    -webkit-mask-size: 50%;
+
+    /* Kleur van de icon */
+    background-color: white;
+  }
+
+  /* Search inpu t*/
+  .search-ad {
+    flex: 1;
+    font-size: 0.9rem;
+    width: 13rem;
+    padding: 15px 10px;
+    border-bottom-left-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+  }
 }
 
 /* Form input & textarea */
 input,
 textarea {
   accent-color: var(--primary-color);
-  border-radius: var(--border-radius);
+  /* border-radius: var(--border-radius); */
   font-size: var(--font-size-heading-s);
   background: var(--background-input-color);
   outline: none;
@@ -251,8 +292,6 @@ textarea {
     }
   }
 }
-
-
 
 /* Range input waarvan de thumb wordt veranderd */
 input[type="range"]::-webkit-slider-thumb {
