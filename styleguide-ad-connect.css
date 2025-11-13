@@ -169,7 +169,7 @@ table {
 
 /* Blockquote */
 blockquote {
-  background: var(--input-color);
+  background: var(--background-input-color);
   border-radius: var(--border-radius);
 
   p {
