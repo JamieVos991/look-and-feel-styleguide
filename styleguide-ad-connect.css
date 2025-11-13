@@ -255,7 +255,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /* Meer nieuws button */
-button {
+.button-ad {
   padding: var(--button-size);
   letter-spacing: var(--letter-spacing);
   text-transform: var(--text-uppercase);
@@ -276,9 +276,5 @@ button {
   &:hover {
     background: var(--primary-lighter-color);
     color: var(--primary-color);
-  }
-
-  span {
-    transform: translateY(3px);
   }
 }
