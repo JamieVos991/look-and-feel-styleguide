@@ -136,6 +136,12 @@ body {
       background-repeat: no-repeat;
     }
   }
+
+  /* Mogelijke oplossing li, alleen lager krijgen
+  li {
+    list-style-type: "";
+    list-style-image: url(./assets/check.svg);
+  } */
 }
 
 /* Table */
@@ -207,13 +213,6 @@ blockquote {
 }
 
 /* Form label */
-/* label {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-size: var(--font-size-s);
-  } */
-
 .label-ad {
   display: grid;
   place-content: center;
