@@ -216,7 +216,7 @@ blockquote {
 
 .label-ad {
   display: grid;
-  place-content: center;
+  justify-self: start;
 }
 
 /* Label van de search input */
