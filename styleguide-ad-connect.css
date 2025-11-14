@@ -192,7 +192,14 @@ blockquote {
     gap: 10px;
     font-size: var(--font-size-m);
 
-    span {
+    &::after {
+      content: ' " ';
+      font-size: 200%;
+      font-family: cursive;
+    }
+
+    &::before {
+      content: ' " ';
       font-size: 200%;
       font-family: cursive;
     }
