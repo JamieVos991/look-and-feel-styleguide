@@ -6,7 +6,10 @@ body {
   font-family: var(--font-family);
 
   label,
-  button {
+  table,
+  input,
+  button,
+  blockquote p {
     font-family: var(--font-family);
   }
 }
