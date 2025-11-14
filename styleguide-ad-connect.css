@@ -327,20 +327,33 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 
-.figure-ad:nth-of-type(1) {
+.figure-ad {
+  display: flex;
+  gap: 20px;
+  align-items: center;
   code {
-    color: white;
+    height: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
   }
-}
 
-.figure-ad:nth-of-type(3) {
-  code {
-    color: white;
+  &:nth-of-type(1) {
+    code {
+      color: white;
+    }
   }
-}
 
-.figure-ad:nth-of-type(6) {
-  code {
-    color: white;
+  &:nth-of-type(3) {
+    code {
+      color: white;
+    }
+  }
+
+  &:nth-of-type(6) {
+    code {
+      color: white;
+    }
   }
 }

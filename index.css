@@ -44,19 +44,4 @@
       text-decoration: underline;
     }
   }
-
-  .figure-ad {
-    display: grid;
-    grid-template-columns: 6rem 1fr;
-    align-items: center;
-    gap: 1rem;
-    margin: 1rem 0;
-    > code {
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      aspect-ratio: 1;
-      background: #ccc;
-    }
-  }
 }
