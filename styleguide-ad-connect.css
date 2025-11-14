@@ -198,11 +198,11 @@ blockquote {
 
 /* Form label */
 /* label {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: var(--font-size-s);
-} */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: var(--font-size-s);
+  } */
 
 .label-ad {
   display: grid;
@@ -229,7 +229,7 @@ blockquote {
     align-self: stretch;
 
     /* Mask de SVG, omdat ik de svg als url in de content gebruikt heb
-    kan ik niet de kleur ervan veranderen. Dit werkt wel dus wel.*/
+      kan ik niet de kleur ervan veranderen. Dit werkt wel dus wel.*/
     mask: url(./assets/search.svg) no-repeat center;
     mask-size: 50%;
     -webkit-mask: url(./assets/search.svg) no-repeat center;
