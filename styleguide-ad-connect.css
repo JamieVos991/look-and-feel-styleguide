@@ -215,7 +215,7 @@ blockquote {
 /* Form label */
 .label-ad {
   display: grid;
-  place-content: center;
+  justify-self: start;
 }
 
 /* Label van de search input */
@@ -318,9 +318,9 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: var(--border-radius);
   font-family: var(--font-family);
   color: var(--primary-lighter-color);
-  display: flex;
-  align-items: center;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
   gap: 5px;
 
   &:active {
