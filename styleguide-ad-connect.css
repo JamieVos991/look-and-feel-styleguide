@@ -17,13 +17,13 @@ body {
 @layer styleguide {
   :root {
     /* Colors */
-    --primary-color: #005f61;
-    --primary-lighter-color: #adebec;
-    --accent-color: #a8005d;
-    --accent-lighter-color: #fcd6e6;
-    --white-color: #fdfdfd;
-    --black-color: #353434;
-    --background-input-color: #ececec;
+    --primary-color: hsl(181 100% 19%);
+    --primary-lighter-color: hsl(181 62% 80%);
+    --accent-color: hsl(327 100% 33%);
+    --accent-lighter-color: hsl(335 86% 91%);
+    --white-color: hsl(0 0% 99%);
+    --black-color: hsl(0 1% 21%);
+    --background-input-color: hsl(0 0% 93%);
 
     /* Line height */
     --line-height-heading: 1.2;
@@ -324,5 +324,23 @@ input[type="range"]::-webkit-slider-thumb {
   &:hover {
     background: var(--primary-lighter-color);
     color: var(--primary-color);
+  }
+}
+
+.figure-ad:nth-of-type(1) {
+  code {
+    color: white;
+  }
+}
+
+.figure-ad:nth-of-type(3) {
+  code {
+    color: white;
+  }
+}
+
+.figure-ad:nth-of-type(6) {
+  code {
+    color: white;
   }
 }
