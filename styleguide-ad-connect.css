@@ -218,45 +218,49 @@ blockquote {
   justify-self: start;
 }
 
-/* Label van de search input */
-.label-search__ad {
+/* Zoekbalk */
+.search-ad {
   display: inline-flex;
-  align-items: stretch;
-  border-bottom-left-radius: var(--border-radius);
-  border-top-left-radius: var(--border-radius);
-  background-color: #005f61;
-  flex-direction: row-reverse;
 
-  &::before {
-    content: "";
-    display: grid;
-    place-content: center;
-    width: 45px;
-    aspect-ratio: 1 / 1;
+  /* Text zoekvak */
+  & input[type="search"] {
+    border: 1px solid var(--primary-color);
+    border-radius: 5px 0 0 5px;
 
+    &:focus {
+      border: 1.5px solid var(--primary-color);
+      border-right: 0;
+    }
+  }
+
+  /* Zoekknop */
+  & button {
+    padding: 0.5rem;
     background-color: var(--primary-color);
-    align-self: stretch;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
 
-    /* Mask de SVG, omdat ik de svg als url in de content gebruikt heb
-      kan ik niet de kleur ervan veranderen. Dit werkt wel dus wel.*/
-    mask: url(./assets/search.svg) no-repeat center;
-    mask-size: 50%;
-    -webkit-mask: url(./assets/search.svg) no-repeat center;
-    -webkit-mask-size: 50%;
+    &:hover {
+      background-color: var(--primary-lighter-color);
+      /* Zoek-icon tijdens hover */
+      & svg {
+      fill: var(--primary-color);
+      }
+    }
 
-    /* Kleur van de icon */
-    background-color: white;
-  }
-
-  /* Search inpu t*/
-  .search-ad {
-    flex: 1;
-    font-size: 0.9rem;
-    width: 13rem;
-    padding: 15px 10px;
-    border-bottom-left-radius: var(--border-radius);
-    border-top-left-radius: var(--border-radius);
-  }
+    &:active {
+      & svg {
+        fill: var(--white-color);
+      }
+    }
+    
+    /* Zoek-icon */
+    & svg{
+    width:1.6rem;
+    fill: var(--white-color);
+    }
+  }   
 }
 
 /* Form input & textarea */
