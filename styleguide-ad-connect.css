@@ -23,7 +23,7 @@ body {
     --accent-lighter-color: hsl(335 86% 91%);
     --white-color: hsl(0 0% 99%);
     --black-color: hsl(0 1% 21%);
-    --background-input-color: hsl(0 0% 93%);
+    --background-input-color: hsl(0, 0%, 93%);
 
     /* Line height */
     --line-height-heading: 1.2;
@@ -110,6 +110,28 @@ body {
 
   .font-size-s {
     font-size: var(--font-size-s);
+  }
+}
+
+/* Kleurenbolletjes */
+.figure-ad {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  code {
+    height: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+  }
+
+  &:nth-of-type(1), 
+  &:nth-of-type(3),
+  &:nth-of-type(6) {
+    code {
+      color: white;
+    }
   }
 }
 
@@ -337,33 +359,4 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 
-.figure-ad {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  code {
-    height: 100px;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    display: grid;
-    place-content: center;
-  }
 
-  &:nth-of-type(1) {
-    code {
-      color: white;
-    }
-  }
-
-  &:nth-of-type(3) {
-    code {
-      color: white;
-    }
-  }
-
-  &:nth-of-type(6) {
-    code {
-      color: white;
-    }
-  }
-}
