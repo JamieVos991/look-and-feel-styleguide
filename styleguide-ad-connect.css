@@ -32,14 +32,13 @@ body {
     /* Button */
     --button-size: 10px 25px;
     --border-radius: 5px;
+    --font-size-button: 0.9rem;
 
     /* Typographie */
     --font-weight-standard: 400;
     --font-weight-heading: 700;
     --font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
-
-    --font-size-button: 0.9rem;
 
     --font-size-s: 1rem;
     --font-size-m: 1.12rem;
@@ -50,7 +49,6 @@ body {
     --font-size-heading-m: 2rem;
     --font-size-heading-l: 2.5rem;
 
-    --letter-spacing: 2px;
   }
 
   /* Color classes */
@@ -307,7 +305,7 @@ textarea {
   /* Form sumbit button */
   &[type="submit"] {
     padding: var(--button-size);
-    letter-spacing: var(--letter-spacing);
+    letter-spacing: 2px;
     text-transform: uppercase;
     background-color: var(--accent-color);
     border: none;
@@ -337,7 +335,7 @@ input[type="range"]::-webkit-slider-thumb {
 /* Meer nieuws button */
 .MeerNieuws-ad{
   padding: var(--button-size);
-  letter-spacing: var(--letter-spacing);
+  letter-spacing: 2px;
   text-transform: uppercase;
   background-color: var(--primary-color);
   border: none;
