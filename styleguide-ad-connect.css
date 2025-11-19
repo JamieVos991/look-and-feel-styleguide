@@ -1,6 +1,7 @@
 /* We gebruiken hier Cascade layers, wat mogelijke problemen met Specificiteit voorkomt
    https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers
-   https://css-tricks.com/css-cascade-layers/ */
+   https://css-tricks.com/css-cascade-layers/ 
+   */
 
 body {
   font-family: var(--font-family);
@@ -48,7 +49,6 @@ body {
     --font-size-heading-s: 1.5rem;
     --font-size-heading-m: 2rem;
     --font-size-heading-l: 2.5rem;
-
   }
 
   /* Color classes */
@@ -124,7 +124,7 @@ body {
     place-content: center;
   }
 
-  &:nth-of-type(1), 
+  &:nth-of-type(1),
   &:nth-of-type(3),
   &:nth-of-type(6) {
     code {
@@ -233,9 +233,39 @@ blockquote {
 }
 
 /* Form label */
+
+.styleguide-form {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  cursor: pointer;
+
+  &:focus {
+    outline: 5px solid red;
+  }
+}
+
 .label-ad {
   display: grid;
-  justify-self: start;
+
+  & span::after {
+    content: "*";
+    color: red;
+    padding-left: 0.3rem;
+  }
+}
+
+input[name="radio-options"]:focus {
+  outline: 2px solid var(--primary-color);
+  border-radius: 20px;
+}
+
+input[type="checkbox"]:focus {
+  outline: 2px solid var(--primary-color);
+  border-radius: 20px;
 }
 
 /* Zoekbalk */
@@ -248,8 +278,12 @@ blockquote {
     border-radius: 5px 0 0 5px;
 
     &:focus {
-      border: 1.5px solid var(--primary-color);
+      border-radius: 0px;
       border-right: 0;
+    }
+
+    &:active {
+      border-radius: 0px;
     }
   }
 
@@ -265,7 +299,7 @@ blockquote {
       background-color: var(--primary-lighter-color);
       /* Zoek-icon tijdens hover */
       & svg {
-      fill: var(--primary-color);
+        fill: var(--primary-color);
       }
     }
 
@@ -274,13 +308,13 @@ blockquote {
         fill: var(--white-color);
       }
     }
-    
+
     /* Zoek-icon */
-    & svg{
-    width:1.6rem;
-    fill: var(--white-color);
+    & svg {
+      width: 1.6rem;
+      fill: var(--white-color);
     }
-  }   
+  }
 }
 
 /* Form input & textarea */
@@ -333,7 +367,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /* Meer nieuws button */
-.MeerNieuws-ad{
+.MeerNieuws-ad {
   padding: var(--button-size);
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -356,5 +390,3 @@ input[type="range"]::-webkit-slider-thumb {
     color: var(--primary-color);
   }
 }
-
-
