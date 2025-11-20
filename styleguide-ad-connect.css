@@ -258,16 +258,6 @@ label {
   }
 }
 
-input[name="radio-options"]:focus {
-  outline: 2px solid var(--primary-color);
-  border-radius: 20px;
-}
-
-input[type="checkbox"]:focus {
-  outline: 2px solid var(--primary-color);
-  border-radius: 20px;
-}
-
 /* Zoekbalk */
 .search-ad {
   display: inline-flex;
@@ -278,8 +268,10 @@ input[type="checkbox"]:focus {
     border-radius: 5px 0 0 5px;
 
     &:focus {
+      outline: none;
       border-radius: 0px;
       border-right: 0;
+      border: 2px solid var(--primary-color);
     }
 
     &:active {
@@ -303,6 +295,15 @@ input[type="checkbox"]:focus {
       }
     }
 
+    &:focus {
+      outline: none;
+      background-color: var(--primary-lighter-color);
+      /* Zoekicon tijdens focus */
+      & svg {
+        fill: var(--primary-color);
+      }
+
+    }
     &:active {
       & svg {
         fill: var(--white-color);
@@ -321,19 +322,15 @@ input[type="checkbox"]:focus {
 input,
 textarea {
   accent-color: var(--primary-color);
-  /* border-radius: var(--border-radius); */
   font-size: var(--font-size-heading-s);
   background: var(--background-input-color);
-  outline: none;
   font-size: var(--font-size-s);
   padding: 3px 5px;
   border: none;
   border-bottom: 1px solid var(--primary-color);
 
   &:focus {
-    border: 1px solid var(--primary-color);
-    outline: none;
-    border-radius: var(--border-radius);
+    border: 0.5px solid var(--primary-color);
   }
 
   /* Form sumbit button */
@@ -349,8 +346,12 @@ textarea {
     color: var(--accent-lighter-color);
     cursor: pointer;
 
+    &:focus {
+      outline-offset: 0.1em;
+    }
+
     &:active {
-      border: 1px solid var(--accent-color);
+      border: 0.5px solid var(--accent-color);
     }
 
     &:hover {
@@ -380,6 +381,11 @@ input[type="range"]::-webkit-slider-thumb {
   display: inline-flex;
   align-items: center;
   gap: 5px;
+
+  &:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 0.1em;
+  }
 
   &:active {
     border: 1px solid var(--primary-color);
