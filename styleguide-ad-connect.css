@@ -328,6 +328,7 @@ textarea {
   padding: 3px 5px;
   border: none;
   border-bottom: 1px solid var(--primary-color);
+  resize: none;
 
   &:focus {
     border: 0.5px solid var(--primary-color);
